@@ -671,7 +671,7 @@ class ClientSocketWrapper():
 
 class BaseHandler(tornado.web.RequestHandler):
     def __init__(self, *request, **kwargs):
-        self.include_host = False
+        self.include_host = True
         super(BaseHandler, self).__init__(*request, **kwargs)
 
     def get_current_user(self):
