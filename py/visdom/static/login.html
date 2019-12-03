@@ -45,11 +45,10 @@ LICENSE file in the root directory of this source tree.
               var dataToSend = JSON.stringify(data);
               $.ajax(
                       {
-                          url: '{{base_url}}',
                           type: 'POST',
                           data: dataToSend,
                           success:function() {
-                            window.location.replace("{{base_url}}")
+                            window.location.reload(true)
                           },
                           error: function () {
                             $("#errorMessage").text("Invalid Login Information");
@@ -58,7 +57,6 @@ LICENSE file in the root directory of this source tree.
               event.preventDefault();
           });
       });
-
   </script>
 
   </head>
